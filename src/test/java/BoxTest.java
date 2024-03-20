@@ -9,12 +9,11 @@ public class BoxTest {
     @Test
     void successfulSearchTest() {
         open("https://demoqa.com/text-box");
-        $("[id=userName]").setValue("3Yko");
-        $("[id=userEmail]").setValue("3434@maill.ru");
-        $("[id=currentAddress]").setValue("Russia");
-        $("[id=permanentAddress]").setValue("Moscow");
-
-        $("[id=submit]").click();
+        $("#userName").setValue("Alex");
+        $("#userEmail").setValue("alex@egorov.com");
+        $("#currentAddress").setValue("Some street 1");
+        $("#permanentAddress").setValue("Another street 1");
+        $("#submit").click();
 
 
         $("[id=search]").shouldHave(text("https://ru.selenide.org"));
