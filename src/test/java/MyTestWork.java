@@ -46,16 +46,23 @@ public class MyTestWork {
         $(byText("Music")).click();
         $("#subjectsInput").setValue("Arts").pressEnter();
 
-
         $("#state").click();
         $(byText("NCR")).click();
 
+        $("#city").click();
+        $(byText("Delhi")).click();
 
+
+
+       // $("#uploadPicture").uploadFromClasspath("photo_2024-03-18_15-04-19.jpg");
 
         $("#submit").click();
 
 
-       // $("[id=output] [id=name]").shouldHave(text("Zyko"));
+        //    $(".modal-content [id=name]").shouldHave(text("Zyko Melnikov"));
+        $(".modal-body").shouldHave(text("Zyko Melnikov"),text("34ko@ov.com"),text("Male"));
+
+
 
     }
 
