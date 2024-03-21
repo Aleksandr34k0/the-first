@@ -12,7 +12,7 @@ public class BoxTest {
     static void beforeAll() {
        Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = true;
-       // Configuration.timeout = 5000; // default 4000
+        Configuration.timeout = 5000; // default 4000
     }
 
     @Test
@@ -22,11 +22,14 @@ public class BoxTest {
         $("#userName").setValue("Zyko");
         $("#userEmail").setValue("34ko@ov.com");
         $("#currentAddress").setValue("Russia");
-        $("#permanentAddress").setValue("Moskov");
+        $("#permanentAddress").setValue("Moskow");
         $("#submit").click();
 
 
-        $("[id=search]").shouldHave(text("https://ru.selenide.org"));
+        $("[id=output] [id=name]").shouldHave(text("Zyko"));
+        $("[id=output] [id=email]").shouldHave(text("34ko@ov.com"));
+        $("[id=output] [id=currentAddress]").shouldHave(text("Russia"));
+        $("[id=output] [id=permanentAddress]").shouldHave(text("Moskow"));
     }
 
 
