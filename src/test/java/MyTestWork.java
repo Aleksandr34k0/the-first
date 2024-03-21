@@ -52,7 +52,7 @@ public class MyTestWork {
 
 
 
-       // $("#submit").click();
+        $("#submit").click();
 
 
        // $("[id=output] [id=name]").shouldHave(text("Zyko"));
