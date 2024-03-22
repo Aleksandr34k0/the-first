@@ -58,8 +58,18 @@ $("#submit").click();
 $(".modal-content").shouldHave(text("Thanks for submitting the form"));
 
 
-   //     $("#table-responsive").shouldHave(text("Vano Vanov"));
+        $(".table-responsive").shouldHave(text("Vano Vanov"));
+        $(".table-responsive").shouldHave(text("Vano@maiiill.com"));
+        $(".table-responsive").shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("8960700160"));
+        $(".table-responsive").shouldHave(text("21 July,1995"));
+        $(".table-responsive").shouldHave(text("Maths"));
+        $(".table-responsive").shouldHave(text("Sports"));
+        $(".table-responsive").shouldHave(text("Russia, Moscow"));
+        $(".table-responsive").shouldHave(text("NCR Noida"));
 
+
+$("#closeLargeModal").click();
 
 
 
